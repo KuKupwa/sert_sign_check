@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pcks7test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="form">
+        <div class="input-item">
+          <div class="inputName">Корневой сертификат</div>
+          <div>
+            <label for="root-cert" class="inputButton" id="root-cert-label">Загрузить</label>
+            <input id="root-cert" type="file" class="inputFile" accept=".pem" />
+          </div>
+        </div>
+        <div class="input-item">
+          <div class="inputName">Электронная подпись</div>
+          <div>
+            <label for="signature" class="inputButton" id="signature-label">Загрузить</label>
+            <input id="signature" type="file" class="inputFile" accept=".sig, .p7b, .p7c, .p7m, .p7s" />
+          </div>
+        </div>
+        <div class="input-item">
+          <div class="inputName">Подписанный файл</div>
+          <div>
+            <label for="signed-file" class="inputButton" id="signed-file-label">Загрузить</label>
+            <input id="signed-file" type="file" class="inputFile" accept=".txt" />
+          </div>
+        </div>
+        <div class="sigChangeWr">
+          <div>Какой тип подписи проверяется?</div>
+          <div>
+            <button id="att" class="sigBut activeS">Разъединенная</button>
+            <button id="det" class="sigBut">Объединенная</button>
+          </div>
+        </div>
+        <button id="buttonCheck" disabled>Проверить</button>
+      </div>
+      <div>
+        <div id="content-output">
+
+        </div>
+        <div id="clean">
+          Очистить
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
